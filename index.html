@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Heather (Hyerin) Im</title>
 
   <style>
     body {
       margin: 0;
-      font-family: Inter, Inter, sans-serif;
+      font-family: Inter, sans-serif;
       background: #ffffff;
       color: #111111;
       line-height: 1.6;
@@ -19,6 +21,8 @@
       margin: 0 auto;
       padding: 70px 28px 100px;
     }
+
+    /* HEADER */
 
     header {
       display: flex;
@@ -43,6 +47,8 @@
       color: #000;
     }
 
+    /* INTRO */
+
     .intro {
       display: grid;
       grid-template-columns: 1fr 240px;
@@ -54,9 +60,9 @@
     h1 {
       font-size: 32px;
       font-weight: 500;
-      font-color: #111111;
+      color: #111111;
       margin: 0 0 28px;
-      letter-spacing: 0px;
+      letter-spacing: 0;
     }
 
     .intro p {
@@ -73,6 +79,15 @@
       border-radius: 8px;
     }
 
+    .highlight {
+      background: linear-gradient(
+        transparent 65%,
+        #dcecff 65%
+      );
+    }
+
+    /* SECTIONS */
+
     section {
       margin-top: 90px;
     }
@@ -85,6 +100,8 @@
       margin-bottom: 30px;
     }
 
+    /* PROJECTS */
+
     .project {
       display: grid;
       grid-template-columns: 240px 1fr;
@@ -92,12 +109,6 @@
       margin-bottom: 40px;
     }
 
-    .project-tag {
-      margin-bottom: 8px;
-      font-size: 13px;
-      color: #777;
-    }
-    
     .project img {
       width: 240px;
       height: 150px;
@@ -106,6 +117,12 @@
       border-radius: 8px;
       border: 1px solid rgba(0, 0, 0, 0.08);
       box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    }
+
+    .project-tag {
+      margin-bottom: 8px;
+      font-size: 13px;
+      color: #777;
     }
 
     .project h3 {
@@ -121,17 +138,19 @@
     }
 
     .project-link {
-    display: inline-block;
-    margin-top: 12px;
-    font-size: 15px;
-    color: #111;
-    text-decoration: none;
-    border-bottom: 1px solid #111;
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 15px;
+      color: #111;
+      text-decoration: none;
+      border-bottom: 1px solid #111;
     }
 
-.project-link:hover {
-  opacity: 0.5;
-}
+    .project-link:hover {
+      opacity: 0.5;
+    }
+
+    /* NEWS */
 
     .news-item {
       display: grid;
@@ -145,6 +164,66 @@
       font-size: 14px;
     }
 
+    /* EXPERIENCE */
+
+    .experience-section {
+      margin-top: 100px;
+    }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .experience-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    .experience-card h3 {
+      margin: 0 0 20px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .experience-item {
+      padding: 16px 0;
+      border-top: 1px solid #e5e5e5;
+    }
+
+    .experience-item strong {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .experience-item span {
+      float: right;
+      font-size: 16px;
+      color: #888;
+    }
+
+    .experience-item p {
+      margin: 5px 0 0;
+      font-size: 16px;
+      color: #666;
+    }
+
+    .institution {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .institution img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+    }
+
+    /* FOOTER */
+
     footer {
       margin-top: 100px;
       padding-top: 30px;
@@ -157,78 +236,10 @@
       color: inherit;
     }
 
-    .experience-section {
-  margin-top: 100px;
-}
-
-.experience-section h2 {
-  font-size: 18px;
-      font-weight: 600;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 12px;
-      margin-bottom: 30px;
-}
-
-.experience-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.experience-card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-}
-
-.experience-card h3 {
-  margin: 0 0 20px;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.experience-item {
-  padding: 16px 0;
-  border-top: 1px solid #e5e5e5;
-}
-
-.experience-item strong {
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.experience-item span {
-  float: right;
-  font-size: 16px;
-  color: #888;
-}
-
-.experience-item p {
-  margin: 5px 0 0;
-  font-size: 16px;
-  color: #666;
-}
-
-.institution {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.institution img {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-}
-
-.highlight {
-  background: linear-gradient(
-    transparent 65%,
-    #dcecff 65%
-  );
-}
+    /* MOBILE */
 
     @media (max-width: 700px) {
+
       .container {
         padding: 40px 20px 70px;
       }
@@ -243,6 +254,7 @@
 
       .intro {
         grid-template-columns: 1fr;
+        gap: 30px;
       }
 
       h1 {
@@ -257,385 +269,610 @@
         grid-template-columns: 1fr;
       }
 
+      .project img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 10;
+      }
+
       .news-item {
         grid-template-columns: 1fr;
         gap: 3px;
       }
-      @media (max-width: 700px) {
-  .experience-grid {
-    grid-template-columns: 1fr;
-  }
 
-  .experience-item span {
-    float: none;
-    display: block;
-    margin-top: 3px;
-  }
-}
+      .experience-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-item span {
+        float: none;
+        display: block;
+        margin-top: 3px;
+      }
     }
   </style>
 </head>
+
 
 <body>
 
   <div class="container">
 
+    <!-- HEADER -->
+
     <header>
-      <div class="name">Heather (Hyerin) Im</div>
+
+      <div class="name">
+        Heather (Hyerin) Im
+      </div>
 
       <nav>
-        <a href="mailto:hyelin1122@gmail.com">Email</a>
-        <a href="https://www.instagram.com/heatherlim.studio/">Art</a>
-        <a href="https://drive.google.com/file/d/1CvFHBj7-Fa8qmUDWYA-c3XNkjWxQ4dOS/view?usp=sharing">CV</a>
+
+        <a href="mailto:hyelin1122@gmail.com">
+          Email
+        </a>
+
+        <a
+          href="https://www.instagram.com/heatherlim.studio/"
+          target="_blank"
+        >
+          Art
+        </a>
+
+        <a
+          href="https://drive.google.com/file/d/1CvFHBj7-Fa8qmUDWYA-c3XNkjWxQ4dOS/view?usp=sharing"
+          target="_blank"
+        >
+          CV
+        </a>
+
       </nav>
 
-      
     </header>
 
 
     <main>
 
+
+      <!-- INTRO -->
+
       <section class="intro" id="about">
 
         <div>
+
           <h1>
-            Hi, I'm Heather <br>
+            Hi, I'm Heather
           </h1>
 
           <p>
-            I’m an interaction designer and UX researcher exploring <span class="highlight">human-AI interaction and 
-              emerging technologies.</span>
-            I design and study human-centered experiences that help people <span class="highlight">
-              interact, communicate, and collaborate with new technologies.</span>
+            I’m an interaction designer and UX researcher exploring
+            <span class="highlight">
+              human-AI interaction and emerging technologies.
+            </span>
+
+            I design and study human-centered experiences that help people
+            <span class="highlight">
+              interact, communicate, and collaborate with new technologies.
+            </span>
           </p>
-          
+
         </div>
 
+
         <div>
+
           <img
             class="profile"
             src="assets/profile_ma.jpg"
             alt="Portrait of Hyerin Im"
           />
+
         </div>
 
       </section>
 
 
-       <section id="work">
-  
-    <h2>Selected Work</h2>
+
+      <!-- SELECTED WORK -->
+
+      <section id="work">
+
+        <h2>Selected Work</h2>
 
 
-          <!-- Project 1 -->
-    <div class="project">
-  
-      <img src="assets/--.png" alt="--">
-  
-      <div>
-  
-        <div class="project-tag">
-          ✶ Niantic Spatial · 2025
+        <!-- NIANTIC SPATIAL -->
+
+        <div class="project">
+
+          <img
+            src="assets/--.png"
+            alt="Niantic Spatial project"
+          />
+
+          <div>
+
+            <div class="project-tag">
+              ✶ Niantic Spatial · 2025
+            </div>
+
+            <h3>
+              Niantic Spatial
+            </h3>
+
+            <p>
+              This research explores how generative AI can surface unspoken
+              cultural differences and foster mutual understanding in
+              intercultural romantic relationships.
+            </p>
+
+            <a
+              href="https://www.tandfonline.com/doi/abs/10.1080/10447318.2026.2727769"
+              class="project-link"
+              target="_blank"
+            >
+              View project →
+            </a>
+
+          </div>
+
         </div>
-  
-        <h3>
-          Niantic Spatial
-        </h3>
-  
-        <p>
-          This research explores how generative AI can surface unspoken cultural differences 
-          and foster mutual understanding in intercultural romantic relationships.
-        </p>
 
-        <a href="https://www.tandfonline.com/doi/abs/10.1080/10447318.2026.2727769" class="project-link" target="_blank">
-          View project →
-        </a>
-  
-      </div>
-  
-    </div>
 
-         
-         <!-- Project 4 -->
-    <div class="project">
-  
-      <img src="assets/prompt.png" alt="prompt image">
-  
-      <div>
 
-         <div class="project-tag">
-          ✶ ICML Workshop AI&HCI · 2023
+        <!-- PROMPTCRAFTER -->
+
+        <div class="project">
+
+          <img
+            src="assets/prompt.png"
+            alt="PromptCrafter project"
+          />
+
+          <div>
+
+            <div class="project-tag">
+              ✶ ICML Workshop AI&amp;HCI · 2023
+            </div>
+
+            <h3>
+              PromptCrafter: Crafting Text-to-Image Prompt through
+              Mixed-Initiative Dialogue with LLM
+            </h3>
+
+            <p>
+              PromptCrafter is a mixed-initiative system that helps users
+              iteratively explore text-to-image model capabilities and craft
+              effective prompts through step-by-step refinement and
+              LLM-generated clarifying questions.
+            </p>
+
+            <a
+              href="https://arxiv.org/pdf/2307.08985"
+              class="project-link"
+              target="_blank"
+            >
+              View project →
+            </a>
+
+          </div>
+
         </div>
-  
-        <h3>
-          PromptCrafter: Crafting Text-to-Image Prompt through Mixed-Initiative Dialogue with LLM
-        </h3>
-  
-        <p>
-         PromptCrafter is a mixed-initiative system that helps users iteratively explore text-to-image model 
-          capabilities and craft effective prompts through step-by-step refinement and LLM-generated 
-          clarifying questions.
-        </p>
 
-        <a href="https://arxiv.org/pdf/2307.08985" class="project-link" target="_blank">
-          View project →
-        </a>
 
-        
-      </div>
-  
-    </div>
 
-  
-    <!-- Project 1 -->
-    <div class="project">
-  
-      <img src="assets/unspoken.png" alt="Unspoken image">
-  
-      <div>
-  
-        <div class="project-tag">
-          ✶ International Journal of Human–Computer Interaction, 1-33 · 2026
+        <!-- UNSPOKEN -->
+
+        <div class="project">
+
+          <img
+            src="assets/unspoken.png"
+            alt="Unspoken into the Spoken project"
+          />
+
+          <div>
+
+            <div class="project-tag">
+              ✶ International Journal of Human–Computer Interaction,
+              1–33 · 2026
+            </div>
+
+            <h3>
+              Unspoken into the Spoken: Visualizing Cultural Nuances in
+              Intercultural Romantic Dyads through Generative AI-driven Art
+            </h3>
+
+            <p>
+              This research explores how generative AI can surface unspoken
+              cultural differences and foster mutual understanding in
+              intercultural romantic relationships.
+            </p>
+
+            <a
+              href="https://www.tandfonline.com/doi/abs/10.1080/10447318.2026.2727769"
+              class="project-link"
+              target="_blank"
+            >
+              View project →
+            </a>
+
+          </div>
+
         </div>
-  
-        <h3>
-          Unspoken into the Spoken: Visualizing Cultural Nuances in Intercultural Romantic Dyads through Generative AI-driven Art.
-        </h3>
-  
-        <p>
-          This research explores how generative AI can surface unspoken cultural differences 
-          and foster mutual understanding in intercultural romantic relationships.
-        </p>
 
-        <a href="https://www.tandfonline.com/doi/abs/10.1080/10447318.2026.2727769" class="project-link" target="_blank">
-          View project →
-        </a>
-  
-      </div>
-  
-    </div>
-  
-  
-    <!-- Project 2 -->
-    <div class="project">
-  
-      <img src="assets/virfie-img.jpg" alt="virfie image">
-  
-      <div>
-  
-        <div class="project-tag">
-          ✶ In Proceedings of IntelliSys 2024. Springer, Cham. · 2024
-          <br>
-          ✶ Earlier work presented at CHI 2022 Extended Abstracts · 2022
+
+
+        <!-- VIRFIE -->
+
+        <div class="project">
+
+          <img
+            src="assets/virfie-img.jpg"
+            alt="Virfie project"
+          />
+
+          <div>
+
+            <div class="project-tag">
+              ✶ In Proceedings of IntelliSys 2024. Springer, Cham. · 2024
+              <br>
+              ✶ Earlier work presented at CHI 2022 Extended Abstracts · 2022
+            </div>
+
+            <h3>
+              Virfie: Enhancing Remote Togetherness with User-Created
+              Scenarios for Virtual Group Selfie
+            </h3>
+
+            <p>
+              This research explores how virtual group selfies can foster
+              creative expression, social connection, and a sense of
+              togetherness in remote settings.
+            </p>
+
+            <a
+              href="https://link.springer.com/chapter/10.1007/978-3-031-66336-9_44"
+              class="project-link"
+              target="_blank"
+            >
+              View project →
+            </a>
+
+          </div>
+
         </div>
-  
-        <h3>
-          Virfie: Enhancing Remote Togetherness with User-Created Scenarios for Virtual Group Selfie
-        </h3>
-  
-        <p>
-          This research explores how virtual group selfies can foster creative expression, 
-          social connection, and a sense of togetherness in remote settings.
-        </p>
-  
-        <a href="https://link.springer.com/chapter/10.1007/978-3-031-66336-9_44" class="project-link" target="_blank">
-          View project →
-        </a>
-  
-      </div>
-  
-    </div>
-  
-  
-    <!-- Project 3 -->
-    <div class="project">
-  
-      <img src="assets/meme-img.png" alt="meme image">
-  
-      <div>
 
-         <div class="project-tag">
-          ✶ Master's Thesis · 2022
+
+
+        <!-- MEMETERVIEW -->
+
+        <div class="project">
+
+          <img
+            src="assets/meme-img.png"
+            alt="Memeterview project"
+          />
+
+          <div>
+
+            <div class="project-tag">
+              ✶ Master's Thesis · 2022
+            </div>
+
+            <h3>
+              Memeterview: Meme-based culture elicitation tool for
+              cross-cultural user studies
+            </h3>
+
+            <p>
+              This research explores how internet memes can surface implicit
+              cultural perspectives and facilitate communication in
+              cross-cultural user research.
+            </p>
+
+            <a
+              href="https://koasas.kaist.ac.kr/handle/10203/344695"
+              class="project-link"
+              target="_blank"
+            >
+              View project →
+            </a>
+
+          </div>
+
         </div>
-  
-        <h3>
-          Memeterview: Meme-based culture elicitation tool for cross-cultural user studies
-        </h3>
-  
-        <p>
-          This research explores how internet memes can surface implicit cultural perspectives 
-          and facilitate communication in cross-cultural user research.
-        </p>
 
-        <a href="https://koasas.kaist.ac.kr/handle/10203/344695" class="project-link" target="_blank">
-          View project →
-        </a>
-  
-      </div>
-  
-    </div>
 
-         
-         <!-- Project 2 -->
-    <div class="project">
-  
-      <img src="assets/neurips-img.png" alt="virfie image">
-  
-      <div>
-  
-        <div class="project-tag">
-          ✶ Poster in Workshop: HCAI@NeurIPS, Human Centered AI · 2022
+
+        <!-- NEURIPS -->
+
+        <div class="project">
+
+          <img
+            src="assets/neurips-img.png"
+            alt="DALL-E moodboard research project"
+          />
+
+          <div>
+
+            <div class="project-tag">
+              ✶ Poster in Workshop: HCAI@NeurIPS, Human Centered AI · 2022
+            </div>
+
+            <h3>
+              Is It Really Useful?: An Observation Study of How Designers
+              Use CLIP-based Image Generation For Moodboards
+            </h3>
+
+            <p>
+              The study examines designers’ use of DALL-E2 for moodboard
+              creation, identifying challenges in prompt formulation and
+              opportunities to improve interactive image-generation tools
+              for design practice.
+            </p>
+
+            <a
+              href="https://neurips.cc/virtual/2022/58805"
+              class="project-link"
+              target="_blank"
+            >
+              View project →
+            </a>
+
+          </div>
+
         </div>
-  
-        <h3>
-          Is It Really Useful?: An Observation Study of How Designers Use CLIP-based Image Generation For Moodboards
-        </h3>
-  
-        <p>
-          The study examines designers’ use of DALL-E2 for moodboard creation, identifying challenges in prompt formulation 
-          and opportunities to improve interactive image-generation tools for design practice.
-        </p>
-  
-        <a href="https://neurips.cc/virtual/2022/58805" class="project-link" target="_blank">
-          View project →
-        </a>
-  
-      </div>
-  
-    </div>
-  
-  </section>
 
+      </section>
+
+
+
+      <!-- NEWS -->
 
       <section id="news">
 
         <h2>News</h2>
 
+
         <div class="news-item">
-          <div class="date">Sep 2026</div>
+
+          <div class="date">
+            Sep 2026
+          </div>
 
           <div>
-            Participating in "Gallery Fold", a Samsung pop-up exhibition in Amsterdam and Brussels.
+            Participating in "Gallery Fold", a Samsung pop-up exhibition
+            in Amsterdam and Brussels.
           </div>
+
         </div>
 
+
         <div class="news-item">
-          <div class="date">Sep 2026</div>
+
+          <div class="date">
+            Sep 2026
+          </div>
 
           <div>
-            Started teaching an “AI Workshop” course at Hongik University this fall.
+            Started teaching an “AI Workshop” course at Hongik University
+            this fall.
           </div>
+
         </div>
 
+
         <div class="news-item">
-          <div class="date">Aug 2026</div>
+
+          <div class="date">
+            Aug 2026
+          </div>
 
           <div>
-            Our research, “Unspoken into the Spoken: Visualizing Cultural Nuances in Intercultural Romantic Dyads 
-            through Generative AI-Driven Art,” was accepted for publication in the International Journal of Human-Computer Interaction.
+            Our research, “Unspoken into the Spoken: Visualizing Cultural
+            Nuances in Intercultural Romantic Dyads through Generative
+            AI-Driven Art,” was accepted for publication in the
+            International Journal of Human-Computer Interaction.
           </div>
+
         </div>
 
       </section>
 
 
-<section class="experience-section">
 
-  <h2>Experience</h2>
+      <!-- EXPERIENCE -->
 
-  <div class="experience-grid">
+      <section class="experience-section">
 
-    <!-- Research -->
-    <div class="experience-card">
-      <strong>Education</strong>
-
-      <div class="experience-item">
-        <strong class="institution">
-          <img src="assets/kaist-logo.png" alt="KAIST logo">
-          KAIST
-        </strong>
-        <span>2021–2023</span>
-        <p>Industrial design, M.S. CIxD Lab
-       <br>
-          advisor: Youn-kyung Lim
-        </p>
-      </div>
-
-      <div class="experience-item">
-   <strong class="institution">
-          <img src="assets/ewha_logo.png" alt="Ewha logo">
-     Ewha Womans University</strong>
-        <span>2017-2021</span>
-        <p>Design, B.F.A. </p>
-      </div>
-
-      <div class="experience-item">
-        <strong class="institution">
-          <img src="assets/hkust-logo.svg" alt="HKUST logo">
-        HKUST</strong>
-        <span>2020-Spring</span>
-        <p>Study abroad · Computer engineering</p>
-      </div>
-
-    </div>
+        <h2>Experience</h2>
 
 
-    <!-- Industry -->
-    <div class="experience-card">
-      <strong>Industry Experience</strong>
+        <div class="experience-grid">
 
-     <div class="experience-item">
-        <strong class="institution">
-          <img src="assets/youtube-logo.png" alt="YouTube logo">
-          YouTube, Google(xWF via AnswerLab)
-        </strong>
-        <span>2025-</span>
-        <p>UX Researcher · YouTube Rapid Research Team</p>
-      </div>
-      
-      <div class="experience-item">
-       <strong class="institution">
-          <img src="assets/niantic-logo.png" alt="Niantic logo"> 
-        Niantic
-       </strong>
-        <span>2022–2025</span>
-        <p>UX Designer & Researcher · ARUX Team</p>
-      </div>
 
-      <div class="experience-item">
-         <strong class="institution">
-          <img src="assets/sony-logo.png" alt="Sony logo"> 
-        Sony Interactive Entertainment
-        </strong>
-        <span>2021</span>
-        <p>Design Intern · Network Business Team</p>
-      </div>
+          <!-- EDUCATION -->
 
-    </div>
+          <div class="experience-card">
 
-  </div>
+            <h3>Education</h3>
 
-</section>
 
-       <section id="Off the Clock">
+            <div class="experience-item">
+
+              <strong class="institution">
+
+                <img
+                  src="assets/kaist-logo.png"
+                  alt="KAIST logo"
+                >
+
+                KAIST
+
+              </strong>
+
+              <span>2021–2023</span>
+
+              <p>
+                Industrial Design, M.S. · CIxD Lab
+                <br>
+                Advisor: Youn-kyung Lim
+              </p>
+
+            </div>
+
+
+            <div class="experience-item">
+
+              <strong class="institution">
+
+                <img
+                  src="assets/ewha_logo.png"
+                  alt="Ewha logo"
+                >
+
+                Ewha Womans University
+
+              </strong>
+
+              <span>2017–2021</span>
+
+              <p>
+                Design, B.F.A.
+              </p>
+
+            </div>
+
+
+            <div class="experience-item">
+
+              <strong class="institution">
+
+                <img
+                  src="assets/hkust-logo.svg"
+                  alt="HKUST logo"
+                >
+
+                HKUST
+
+              </strong>
+
+              <span>Spring 2020</span>
+
+              <p>
+                Study Abroad · Computer Engineering
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- INDUSTRY -->
+
+          <div class="experience-card">
+
+            <h3>Industry Experience</h3>
+
+
+            <div class="experience-item">
+
+              <strong class="institution">
+
+                <img
+                  src="assets/youtube-logo.png"
+                  alt="YouTube logo"
+                >
+
+                YouTube, Google (xWF via AnswerLab)
+
+              </strong>
+
+              <span>2025–Present</span>
+
+              <p>
+                UX Researcher · YouTube Rapid Research Team
+              </p>
+
+            </div>
+
+
+            <div class="experience-item">
+
+              <strong class="institution">
+
+                <img
+                  src="assets/niantic-logo.png"
+                  alt="Niantic logo"
+                >
+
+                Niantic
+
+              </strong>
+
+              <span>2022–2025</span>
+
+              <p>
+                UX Designer &amp; Researcher · ARUX Team
+              </p>
+
+            </div>
+
+
+            <div class="experience-item">
+
+              <strong class="institution">
+
+                <img
+                  src="assets/sony-logo.png"
+                  alt="Sony logo"
+                >
+
+                Sony Interactive Entertainment
+
+              </strong>
+
+              <span>2021</span>
+
+              <p>
+                Design Intern · Network Business Team
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- OFF THE CLOCK -->
+
+      <section id="off-the-clock">
 
         <h2>Off the Clock</h2>
+
         <p>
-            I’m usually playing tennis or taking Coongi, my dog, for a walk! 🎾🐶
-          </p>
+          I’m usually playing tennis or taking Coongi, my dog,
+          for a walk! 🎾🐶
+        </p>
 
       </section>
 
 
-      
     </main>
+
 
 
     <footer>
       © 2026 Hyerin Im
     </footer>
 
+
   </div>
 
 </body>
+
 </html>
